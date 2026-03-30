@@ -6,6 +6,7 @@ interface IconProps {
   size: number;
   focused: boolean;
 }
+
 export const InfoIcon = ({ color, size, focused }: IconProps) => <Ionicons name={focused ? "home" : "home-outline"} color={color} size={size} />
 export const aboutIcon = ({ color, size, focused }: IconProps) => <Ionicons name={focused ? "information-circle" : "information-circle-outline"} color={color} size={size} />
 
