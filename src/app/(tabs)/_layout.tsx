@@ -11,6 +11,7 @@ interface IconProps {
 
 export const InfoIcon = ({ color, size, focused }: IconProps) => <Ionicons name={focused ? "home" : "home-outline"} color={color} size={size} />
 export const aboutIcon = ({ color, size, focused }: IconProps) => <Ionicons name={focused ? "information-circle" : "information-circle-outline"} color={color} size={size} />
+export const profileIcon = ({ color, size, focused }: IconProps) => <Ionicons name={focused ? "person" : "person-outline"} color={color} size={size} />
 
 export default function TabsLayout() {
 
@@ -32,6 +33,10 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="about"
         options={{ tabBarIcon: aboutIcon }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{ tabBarIcon: profileIcon }}
       />
     </Tabs>
   )

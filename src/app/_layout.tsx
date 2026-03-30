@@ -1,20 +1,11 @@
-import { AuthProvider, useAuth } from "@/context/AuthContext";
-import { Stack, useRouter } from "expo-router";
-import { useEffect } from "react";
+import { AuthProvider } from "@/context/AuthContext";
+import { Stack } from "expo-router";
 
-// TODO fix auth context
 export default function RootLayout() {
-
-  const router = useRouter();
-  const user = useAuth().user;
-
-  useEffect(() => {
-    router.replace("/(auth)/login")
-  }, [user])
 
   return (
     <AuthProvider>
-      <Stack>
+      <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="(tabs)" />
         <Stack.Screen name="(auth)" />
       </Stack>

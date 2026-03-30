@@ -1,4 +1,5 @@
 /* file AuthContext.tsx */
+import { useRouter } from "expo-router";
 import { createContext, ReactNode, useContext, useState } from "react";
 
 interface UserValue {
@@ -35,15 +36,19 @@ type AuthProviderProps = {
 export function AuthProvider({ children }: Readonly<AuthProviderProps>) {
   // We keep the user in state
   const [user, setUser] = useState<UserValue | null>(null);
+  const router = useRouter();
   const login = () => {
     setUser({
       name: "Jhon Doe",
       email: "example@gmail.com",
       id: "789456123"
-    })
+    }
+    )
+    router.replace("/(tabs)/about");
   }
   const logout = () => {
     setUser(null);
+    router.replace("/(auth)/login");
   }
 
   // The value object that all consumers will receive
