@@ -5,7 +5,7 @@
     "": {
       "name": "horse-tinder",
       "dependencies": {
-        "@expo/ui": "~55.0.6",
+        "@expo/ui": "^55.0.6",
         "@react-navigation/bottom-tabs": "^7.15.5",
         "@react-navigation/elements": "^2.9.14",
         "@react-navigation/native": "^7.1.33",
