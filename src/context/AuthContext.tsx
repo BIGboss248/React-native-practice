@@ -35,12 +35,15 @@ type AuthProviderProps = {
 export function AuthProvider({ children }: Readonly<AuthProviderProps>) {
   // We keep the user in state
   const [user, setUser] = useState<UserValue | null>(null);
-  // Function to switch between light ↔ dark
   const login = () => {
-    console.log("User logged in!!!");
+    setUser({
+      name: "Jhon Doe",
+      email: "example@gmail.com",
+      id: "789456123"
+    })
   }
   const logout = () => {
-    console.log("User logged out");
+    setUser(null);
   }
 
   // The value object that all consumers will receive
